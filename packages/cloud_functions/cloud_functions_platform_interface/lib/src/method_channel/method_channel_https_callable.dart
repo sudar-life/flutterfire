@@ -21,7 +21,7 @@ class MethodChannelHttpsCallable extends HttpsCallablePlatform {
     try {
       Object? result = await MethodChannelFirebaseFunctions.channel
           .invokeMethod('FirebaseFunctions#call', <String, dynamic>{
-        'appName': functions.app!.name,
+        'appName': functions.app!.options.projectId,
         'functionName': name,
         'origin': origin,
         'region': functions.region,
